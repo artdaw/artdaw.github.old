@@ -1,1 +1,36 @@
-My Page
+<!doctype>
+<html>
+<head>
+	<title>Gleb artdaw Galkin &mdash; Home page</title>
+</head>
+<body>
+	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	new TWTR.Widget({
+	  version: 2,
+	  type: 'profile',
+	  rpp: 7,
+	  interval: 30000,
+	  width: 'auto',
+	  height: 300,
+	  theme: {
+	    shell: {
+	      background: '#7a7a7a',
+	      color: '#ffffff'
+	    },
+	    tweets: {
+	      background: '#ffffff',
+	      color: '#ffffff',
+	      links: '#1476cc'
+	    }
+	  },
+	  features: {
+	    scrollbar: true,
+	    loop: false,
+	    live: true,
+	    behavior: 'default'
+	  }
+	}).render().setUser('artdaw').start();
+	</script>
+</body>
+</html>
