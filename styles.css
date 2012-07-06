@@ -216,8 +216,16 @@ nav a:hover {
 	color: #555;
 }
 
+.posts {
+	margin: 0;
+}
+
 .posts li, .posts a {
 	padding: 0.5em;
+}
+
+.posts li {
+	padding-left: 0;
 }
 
 .me {
