@@ -1,0 +1,310 @@
+@font-face {  
+  font-family: "Sick Capital Vice";  
+  src: url(sickcapital-vice.otf); /* IE */  
+  src: local("Sick Capital Vice"), url(sickcapital-vice.ttf) format("truetype"); /* non-IE */  
+}  
+@font-face{ 
+	font-family: 'WebSymbolsRegular';
+	src: url('websymbols-regular-webfont.eot');
+	src: url('websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('websymbols-regular-webfont.woff') format('woff'),
+	     url('websymbols-regular-webfont.ttf') format('truetype'),
+	     url('websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+ul {
+	list-style: none;
+}
+
+ul, ol {
+		margin: 0 0 0 1.5em;
+}
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+h1, h2, h3, h4 {
+	font-family: Georgia, serif;
+	font-weight: 400;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+body {
+	font: 16px/24px 'Helvetica Neue', serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: #ccc;}
+::-moz-selection 	{background: #ccc;}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: #ccc;}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	background: url(egg_shell.png);
+	color: #171717;
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+a {
+	color: #114680;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.sick {
+	font-family: 'Sick Capital Vice';
+}
+
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+.container {
+	margin: 0 auto;
+	width: 896px;
+}
+
+header {
+	margin: 4em 0 1em 0;
+	text-align: center;
+}
+
+footer {
+	font-size: 0.8em;
+	margin: 2em 0 1em 0;
+	padding: 1em 0 0 0;
+	border-top: 1px dashed #a0a0a0;
+}
+
+.float-left {
+	display: block;
+	float: left;
+}
+
+.float-right {
+	display: block;
+	float: right;
+}
+
+.logo {
+	font-size: 100px;
+	font-weight: 700;
+	text-shadow: 1px 1px 1px #fff;
+	margin-bottom: 50px;
+}
+
+.logo a {
+	text-decoration: none;
+}
+
+.text {
+	text-align: justify;
+	padding: 24px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: whitesmoke;
+	margin: 1em 0;	
+}
+
+.java {
+	color: #7a3c0d;
+}
+
+.ux {
+	color: #114680;
+}
+
+header h4 {
+	color: #555;
+	font-size: 1.2em;
+}
+
+nav {
+	border-bottom: 1px dashed #a0a0a0;
+	border-top: 1px dashed #a0a0a0;
+	text-align: center;
+	margin: 0 0 2em 0;
+}
+
+nav a  {
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 1em;
+	padding: 0.2em 0.7em;
+}
+
+nav a:hover {
+	color: #fff;
+	background: #114680;
+}
+
+.symbol {
+	font-family: "WebSymbolsRegular";
+	font-size: 2em;
+	text-shadow: 0px 1px 1px white;
+	color: #555;
+}
+
+.posts li, .posts a {
+	padding: 0.5em;
+}
+
+.me {
+	width: 35%;
+	font-size: 0.8em;
+	text-align: justify;
+	line-height: 20px;
+}
+
+.me img {
+	border-radius: 7px;
+	border: 1px solid #CCC;
+	float:left;
+    margin: 7px 7px 0 0;
+	box-shadow: 1px 1px 1px #fff;
+	-webkit-box-shadow: 1px 1px 1px #fff;
+	-moz-box-shadow: 1px 1px 1px #fff;
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	.container {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 12px;
+	}
+	.container {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	.container {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+	
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	body {
+	
+	}
+	
+}

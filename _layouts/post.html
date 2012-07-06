@@ -1,0 +1,19 @@
+---
+layout: default
+no_sidebar: true
+---
+
+<h4>{{ page.title }}</h4>
+<div class="text">
+	{{ content }}
+</div>
+
+<div>
+	{% if page.next.url %}
+		<a href="{{ page.next.url }}" rel="next" title="{{ page.next.title }}" class="float-left">&larr;&nbsp;{{ page.next.title }}</a>
+	{% endif %}
+	{% if page.previous.url %}
+		<a href="{{ page.previous.url }}" rel="previous" title="{{ page.previous.title }}" class="float-right">{{ page.previous.title }}&nbsp;&rarr;</a>
+	{% endif %}
+	<div class="clear"></div>
+</div>

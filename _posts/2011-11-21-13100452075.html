@@ -1,0 +1,78 @@
+---
+layout: post
+title: Executable JAR with dependencies using Maven
+---
+
+<p>Sometimes I like to fall for things like &#8220;let&#8217;s extract a piece of our application to use it separately as executable JAR, just for testing&#8221;&#8230;<br/> Bad for mind, good for experience.<br/> Thanks to my memory I&#8217;m going to use Maven, my old best friend in projects creation, to generate executable JAR.</p>
+
+<ol>
+	<li>
+		First of all I create Maven project:
+		{% highlight xml %}mvn archetype:create -DgroupId=info.artdaw -DartifactId=test-project{% endhighlight %}
+	</li>
+	<li>
+		Proceed to the &#8220;test-project&#8221; directory and open pom.xml
+	</li>
+	<li>
+		<p>
+			Since I create command line JAR I need to parse command line arguments. To speed-up this task I decide to use <strong>org.apache.commons-cli</strong> that is pretty good. So, add this commons-cli as the dependency:
+		</p>
+{% highlight xml %}
+<dependencies>
+  <dependency>
+    <groupId>commons-cli</groupId>
+    <artifactId>commons-cli</artifactId>
+    <version>1.1</version>
+  </dependency>
+</dependencies>
+{% endhighlight %}
+	</li>
+	<li>
+		Final step is to create <strong>executable</strong> JAR with dependencies. <a href="http://maven.apache.org/plugins/maven-assembly-plugin/">Maven assembly plugin</a> will help:
+{% highlight xml %}
+<build>
+  <finalName>ftp-test</finalName>
+  <plugins>     
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <executions>
+        <execution>
+          <goals>
+            <goal>attached</goal>
+          </goals>
+          <phase>package</phase>
+          <configuration>
+            <descriptorRefs>
+              <descriptorRef>jar-with-dependencies</descriptorRef>
+            </descriptorRefs>
+            <archive>
+              <manifest>
+                <mainClass>info.artdaw.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </execution>
+     </executions>
+    </plugin>
+ </plugins>
+</build>
+{% endhighlight %}
+
+<p>
+	Since the Maven project creation you probably notice info.artdaw.App class. This is just a simple class Maven created by default. I decide to make it main class of my executable JAR, so I add it in manifest configuration as 	<code><mainClass>com.shc.obu.mp.spin.App</mainClass>.</code>
+</p>
+<p>I also used predefined descriptor <descriptorRef>jar-with-dependencies</descriptorRef> and attached assembly goal to the package build phase to get the JAR with dependencies using <code>mvn clean package</code> command.</p>
+<p>As you can see I named JAR as <finalName>ftp-test</finalName>, but Maven assembly plugin named JAR as follows: ftp-test-jar-with-dependencies.jar.</p>
+</li>
+
+<li>It&#8217;s showtime! Run <code>mvn clean package</code> and try the following command:
+{% highlight bash %}
+$ java -jar target/ftp-test-jar-with-dependencies.jar
+Hello World!
+{% endhighlight %}
+
+Now it I can parse command line parameters in App class and do my job further, but it is not so exciting :)
+</li>
+</ol>
+<p>P.S. If you open ftp-test-jar-with-dependencies.jar you will notice all dependencies there ;)</p>
