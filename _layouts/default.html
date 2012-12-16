@@ -3,53 +3,30 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>
-			Gleb Galkin&nbsp;&nbsp;/&nbsp;&nbsp;Java developer, Ruby psycho, UX design adept&nbsp;&nbsp;/&nbsp;&nbsp;Minsk, Belarus
+			Gleb Galkin&nbsp;&nbsp;/&nbsp;&nbsp;Java developer, deliverability manager&nbsp;&nbsp;/&nbsp;&nbsp;Minsk, Belarus
 		</title>
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="stylesheet" media="all" href=""/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+		<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+		<link href="/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="/bootstrap-responsive.min.css" media="screen" rel="stylesheet" type="text/css">
 		<link href="/syntax.css" media="screen" rel="stylesheet" type="text/css">
-		<link href="/styles.css" media="screen" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" media="all" href="/styles.css"/>
 	</head>
-<body>
+<body>	
 	<div class="container">
-		<header>
-			<h1 class="logo sick"><a href="/">.artdaw.</a></h1>
-			<h4>
-				<span class="java">Java developer</span>&nbsp;&nbsp;&#8226;&nbsp;
-				<!--span class="ruby">Ruby psycho</span>&nbsp;&nbsp;&#8226;&nbsp; -->
-				<span class="ux">UX design adept</span>
-			</h4>
-		</header>
-		<nav>
-			<a href="/">Home</a>
-			<a href="http://github.com/artdaw">Github</a>
-			<a href="http://twitter.com/#!/artdaw" target="_blank">Twitter</a>
-			<a href="http://www.facebook.com/artdaw" target="_blank">Facebook</a>
-			<a href="/feed.xml" target="_blank">RSS</a>
-		</nav>	
-		
 		{{ content }}
-		
-		<footer>
-			&copy; 2012 Gleb Galkin &mdash; 
-			<a href="http://github.com/artdaw">Github</a>,&nbsp;
-			<a href="http://twitter.com/#!/artdaw">Twitter</a>,&nbsp;
-			<a href="http://www.facebook.com/artdaw">Facebook</a>
-		</footer>
 	</div>
 	<script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-27101579-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
+	    var _gaq = _gaq || [];
+	    _gaq.push(['_setAccount', 'UA-27101579-1']);
+	    _gaq.push(['_trackPageview']);
+	    (function() {
+	      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	    })();
+	</script>
 </body>
 </html>
